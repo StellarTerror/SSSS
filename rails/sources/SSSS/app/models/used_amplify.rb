@@ -1,0 +1,2 @@
+class UsedAmplify < ApplicationRecord
+end

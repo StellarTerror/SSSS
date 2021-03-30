@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  group_id: 1
+  start_datetime: 2021-03-16 04:15:45
+  instance_user_id: 1
+
+two:
+  group_id: 1
+  start_datetime: 2021-03-16 04:15:45
+  instance_user_id: 1

@@ -1,0 +1,2 @@
+class ShiftRequest < ApplicationRecord
+end

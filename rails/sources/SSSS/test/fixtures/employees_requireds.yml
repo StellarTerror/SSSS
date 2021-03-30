@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  group_id: 1
+  role_id: 1
+  start_datetime: 2021-03-16 04:14:49
+  required_num: 1
+
+two:
+  group_id: 1
+  role_id: 1
+  start_datetime: 2021-03-16 04:14:49
+  required_num: 1

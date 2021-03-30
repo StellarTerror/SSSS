@@ -1,0 +1,50 @@
+
+.navbar-brand {
+    background: url("./SSSS_logo.png") no-repeat left center;
+    background-size: contain;
+    height: 50px;
+    width: 250px;
+}
+
+div.form {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+div.form input {
+    font: 1em sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+div.form input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+div.form input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+div.form input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+ }
+ 
+.fc-event-title {
+    color:black;
+    margin: 0em 0em 0em .2em !important;
+    font-size: large !important;
+    font-style: normal !important;
+}
+
+.fc-day-today {
+  background-color:inherit !important;
+}

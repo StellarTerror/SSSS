@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet"  href="style.css">
+    <title>SSSS. | グループ一覧</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./user_group_list.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e9eaee;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <button class="btn btn-outline-success logout" type="submit">ログアウト</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="modal" tabindex="-1" id="unclosable-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">modal title</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p class="message">message</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" onclick="location.href='./index.html'">戻る</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row text-center m-3 justify-content-center">
+                    <div class="col-sm-8">
+                        <h2>グループ一覧</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" width="70%">名前</th>
+                                    <th scope="col" width="15%"></th>
+                                    <th scope="col" width="15%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="row-add">
+                                    <td colspan="3"><button type="button" class="btn btn-primary" id="add-group">追加</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
