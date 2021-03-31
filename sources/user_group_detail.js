@@ -437,22 +437,12 @@ async function add_role_to_employee(token) {
 }
 
 function add_role_to_table(id, name) {
-    if (name != "default") {
-        $("#row-add-role").before(`<tr id="row-${id}">
+    $("#row-add-role").before(`<tr id="row-${id}">
 <td id="role-td-name-${id}">${name}</td>
 <td id="role-td-checkbox-${id}"><input type="checkbox" class="form-check-input" id="role-checkbox-${id}"></td>
 <td id="role-td-edit-${id}"><button type="button" class="btn btn-outline-primary" id="role-edit-${id}">編集</button></td>
 <td id="role-td-delete-${id}"><button type="button" class="btn btn-outline-danger" id="role-erase-${id}">削除</button></td>
 </tr>`);
-    }
-    else {
-        $("#row-add-role").before(`<tr id="row-${id}">
-<td id="role-td-name-${id}">${name}</td>
-<td id="role-td-checkbox-${id}"><input type="checkbox" class="form-check-input" id="role-checkbox-${id}"></td>
-<td id="role-td-edit-${id}"><button type="button" class="btn btn-outline-primary" id="role-edit-${id}">編集</button></td>
-<td id="role-td-delete-${id}"><button type="button" class="btn btn-outline-danger" id="role-erase-${id}" disabled>削除</button></td>
-</tr>`);
-    }
 
     $(`#role-erase-${id}`).on("click", function() {
         erase_role(id);
