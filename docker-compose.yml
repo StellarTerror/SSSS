@@ -29,7 +29,7 @@ services:
       - 80:80
     privileged: true
     volumes:
-      - "./sources/:/usr/share/nginx/html"
+      - "./web/sources/:/usr/share/nginx/html"
 
   postgres:
     image: postgres:12.5-alpine
