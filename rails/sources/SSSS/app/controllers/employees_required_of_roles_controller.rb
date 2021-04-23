@@ -37,6 +37,12 @@ class EmployeesRequiredOfRolesController < ApplicationController
           if current_num == -1
             current_num = required[:required_num]
             current_start_datetime = required[:start_datetime]
+
+            if (required[:start_datetime].hour == 23 && required[:start_datetime].min == 30)
+              post_data.push({start_datetime: current_start_datetime.to_s, end_datetime: (required[:start_datetime] + 1800).to_s, num: current_num, role_name: role[:name], role_id: role[:id]})
+              current_num = -1
+              current_start_datetime = nil
+            end
           else
             if current_num != required[:required_num]
               post_data.push({start_datetime: current_start_datetime.to_s, end_datetime: required[:start_datetime].to_s, num: current_num,  role_name: role[:name], role_id: role[:id]})
@@ -45,7 +51,7 @@ class EmployeesRequiredOfRolesController < ApplicationController
             end
 
             if (required[:start_datetime].hour == 23 && required[:start_datetime].min == 30)
-              post_data.push({start_datetime: current_start_datetime.to_s, end_datetime: (required[:start_datetime] + 1800).to_s, status: current_num})
+              post_data.push({start_datetime: current_start_datetime.to_s, end_datetime: (required[:start_datetime] + 1800).to_s, num: current_num, role_name: role[:name], role_id: role[:id]})
               current_num = -1
               current_start_datetime = nil
             end

@@ -73,6 +73,17 @@ class FixedShiftsController < ApplicationController
       if current_status.nil?
         current_status = request[:shift_status]
         current_start_datetime = request[:start_datetime]
+
+        if (request[:start_datetime].hour == 23 && request[:start_datetime].min == 30)
+          if current_status == -1 
+            post_data.push({start_datetime: current_start_datetime.to_s, end_datetime: (request[:start_datetime] + 1800).to_s, status: current_status, role_name: nil})
+          else
+            role = Role.find_by(id: current_status)
+            post_data.push({start_datetime: current_start_datetime.to_s, end_datetime: (request[:start_datetime] + 1800).to_s, status: current_status, role_name: role[:name]})
+          end
+          current_status = nil
+          current_start_datetime = nil
+        end
       else
         if current_status != request[:shift_status]
           if current_status == -1
