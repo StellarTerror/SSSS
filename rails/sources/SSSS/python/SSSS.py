@@ -23,12 +23,20 @@ q = gen_symbols(BinaryPoly, M, N, K)
 # q[i][j][k] := バイト i が時間 j にグループ k として勤務するかどうか
 
 cost1 = BinaryPoly()
+
+mean = BinaryPoly()
+for i in range(M):
+    for j in range(K):
+        for k in range(N):
+            mean += q[i][k][j]
+mean /= M
+
 for i in range(M):
     tmp = BinaryPoly()
     for j in range(K):
-        for k in range(1,N):
+        for k in range(N):
             tmp += q[i][k][j]
-    cost1 += tmp*tmp
+    cost1 += (tmp-mean)*(tmp-mean)
 
 
 cost2 = [equal_to(BinaryPoly(),0)]
